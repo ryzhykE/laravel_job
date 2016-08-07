@@ -8,14 +8,10 @@ use App\Jobs\MailSend;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
-class Remind extends Command
-{
+class Remind extends Command {
     
     protected $signature = 'remind';
-
-    
     protected $description = 'Remind user to return a book';
-
  
     public function handle() {
         $books = Book::whereRaw('taken < curdate() - interval 30 day')->get();
