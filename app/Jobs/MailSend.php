@@ -30,7 +30,6 @@ class MailSender extends Job implements SelfHandling, ShouldQueue
         $this->referenceUrl = $referenceUrl;
     }
 
- 
     public function handle(Mailer $mailer)
     {
         $mailer->send(
