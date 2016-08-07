@@ -9,8 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
 
 
-class BookApiController extends Controller
-{
+class BookApiController extends Controller {
 	public function mailUsers(Book $book){
         $users = User::all();
         $url = route('books');
